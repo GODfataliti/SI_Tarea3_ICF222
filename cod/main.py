@@ -6,7 +6,7 @@ import pandas as pd
 
 def main():
     
-    datos = pd.read_csv('datos.csv')
+    datos = pd.read_csv('Churn_Modelling.csv')
     print(datos)
 
 
