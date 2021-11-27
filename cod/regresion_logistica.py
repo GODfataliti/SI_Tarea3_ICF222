@@ -3,8 +3,5 @@
 
 class RegresionLogistica:
 
-    def __init__(self) -> None:
-        pass
-
-    def metodo(self):
+    def __init__(self):
         pass
