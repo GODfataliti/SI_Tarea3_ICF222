@@ -56,10 +56,16 @@ Se creara el ambiente de trabajo, ingresas a la direccion env/Scripts/ y selecci
   $/env/Scripts/activate.bat
 ```
 
-Ahora activado el ambiente de trabajom, instalaremos las dependencias
+Ahora activado el ambiente de trabajo, instalaremos las dependencias
 
 ```bash
   $pip install -r requirements.txt
 ```
 
-----
+---
+
+Todo listo para utilizar el codigo!
+
+```bash
+  $cod/main.py
+```
