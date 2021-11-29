@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib as plt
 import pandas as pd
 import random
-import keras
+#import keras
 from keras.models import Sequential
 from keras.layers import Dense
 from sklearn.preprocessing import LabelEncoder, OneHotEncoder, StandardScaler
@@ -35,8 +35,6 @@ def main():
     X_test = sc.fit_transform(X_test)
     #print(X_test,end="\n\n")
     #print(X_train)
-
-
 
 
     #Creacion del modelo
