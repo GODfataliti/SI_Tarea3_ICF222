@@ -23,16 +23,19 @@ X = X[:, 1:]
 #random state numero random de la semilla entre 1 y 100
 seed = random.randint(1,100)
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=seed)
-print(f'x entrenamiento: {X_train}')
-print(f'x test: {X_test}')
-
-print(f'y entrenamiento: {y_train}')
-print(f'y test: {y_test}')
+def printtest(X_train, X_test, y_train, y_test):
+    print(f'{X_train}')
+    print(f'{X_test}')
+    print(f'{y_train}')
+    print(f'{y_test}')
 
 #PARTE 2: REGRESION LOGISTICA
-
 model = LogisticRegression()
 model.fit(X_train, y_train)
+def printRegresion(model, X_train, X_test, y_train, y_test):
+    print(f'{model.score(X_test, y_test)}')
 
+
+printRegresion(model, X_train, X_test, y_train, y_test)
 
 
