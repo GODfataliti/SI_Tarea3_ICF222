@@ -9,9 +9,15 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 
 df = pd.read_csv('Churn_Modelling.csv')
-print(df.head())
+#print(df.head())
 X = df.iloc[:, 3:13].values
 y = df.iloc[:, 13].values
+
+le_geography = LabelEncoder()
+X[:, 1] = le_geography.fit_transform(X[:, 1])
+le_gender = LabelEncoder()
+X[:, 2] = le_gender.fit_transform(X[:, 2])
+X = X[:, 1:]
 
 #PARTE 1: TESTEO 25% Y ENTRENAMIENTO 75%
 #random state numero random de la semilla entre 1 y 100
@@ -24,6 +30,9 @@ print(f'y entrenamiento: {y_train}')
 print(f'y test: {y_test}')
 
 #PARTE 2: REGRESION LOGISTICA
+
+model = LogisticRegression()
+model.fit(X_train, y_train)
 
 
 

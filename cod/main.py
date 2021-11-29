@@ -20,7 +20,6 @@ def main():
     X[:, 1] = le_geography.fit_transform(X[:, 1])
     le_gender = LabelEncoder()
     X[:, 2] = le_gender.fit_transform(X[:, 2])
-    # evitar trampa de variable irrrelevante ;)
     X = X[:, 1:]
     print(X)
     print(X.shape)
