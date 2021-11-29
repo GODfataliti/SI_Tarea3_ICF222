@@ -52,16 +52,20 @@ def main():
 
     #Capa oculta
     classifier = Sequential()
+    #capa oculta
     classifier.add(Dense(units=6, kernel_initializer='uniform', activation='relu', input_dim=9))
 
+    #capa oculta
+    #classifier.add(Dense(units=6, kernel_initializer='uniform', activation='relu'))
 
-    # classifier.add(Dense(units=6, kernel_initializer='uniform', activation='relu'))
+    #capa oculta
+    #classifier.add(Dense(units=6, kernel_initializer='uniform', activation='relu'))
 
-    # classifier.add(Dense(units=1, kernel_initializer='uniform', activation='sigmoid'))
+    classifier.add(Dense(units=1, kernel_initializer='uniform', activation='sigmoid'))
 
     classifier.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
     classifier.fit(X_train, y_train, epochs=100, batch_size=10)
-
+    
     # y_pred = classifier.predict(X_test)
     # y_pred = (y_pred > 0.5)
     # print(y_pred)
