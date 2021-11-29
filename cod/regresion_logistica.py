@@ -33,9 +33,10 @@ def printtest(X_train, X_test, y_train, y_test):
 model = LogisticRegression()
 model.fit(X_train, y_train)
 def printRegresion(model, X_train, X_test, y_train, y_test):
+    model.fit(X_train, y_train)
     print(f'{model.score(X_test, y_test)}')
 
-
+#printtest(X_train, X_test, y_train, y_test)
 printRegresion(model, X_train, X_test, y_train, y_test)
 
 
